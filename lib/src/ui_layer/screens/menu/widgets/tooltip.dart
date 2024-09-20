@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-
-import '../../../../data_layer/res/res.dart';
+import 'package:grarri/src/data_layer/res/res.dart';
 
 class MenuContentDivider extends StatelessWidget {
   const MenuContentDivider({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Divider(
+    return const Divider(
       height: 1,
       color: Colors.grey,
     );

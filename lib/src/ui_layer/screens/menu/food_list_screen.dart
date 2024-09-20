@@ -55,12 +55,13 @@ class _FoodListScreenState extends State<FoodListScreen> {
               const CommonButton(
                 imagePath: AppImages.hash,
               ),
-              10.sbWidth,
+              16.sbWidth,
             ],
             bottom: TabBar(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               labelStyle: AppStyles.semiBoldTextStyle(
                   color: AppColors.selectedLabelText),
+              labelPadding: EdgeInsets.zero,
               indicatorColor: AppColors.selectedLabelText,
               indicatorSize: TabBarIndicatorSize.tab,
               indicatorPadding: const EdgeInsets.symmetric(horizontal: 10),

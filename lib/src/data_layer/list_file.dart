@@ -196,22 +196,4 @@ final List<FoodItem> dishOfTheWeek = [
           'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
       price: 900.00,
       isVeg: true),
-  FoodItem(
-      name: 'Bow Tie Pasta (Farfalle) with Bread - Creamy',
-      image:
-          'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
-      price: 280.00,
-      isVeg: true),
-  FoodItem(
-      name: 'Chicken Carbonara',
-      image:
-          'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
-      price: 450.00,
-      isVeg: false),
-  FoodItem(
-      name: 'Penne Primavera',
-      image:
-          'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
-      price: 320.00,
-      isVeg: true),
 ];
