@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:grarri/src/business_layer/providers/cart_provider.dart';
 import 'package:grarri/src/data_layer/model/model.dart';
 import 'package:grarri/src/data_layer/res/res.dart';
@@ -84,7 +85,7 @@ class CartScreen extends StatelessWidget {
                         : 24.sbHeight;
                   },
                 ),
-                // 24.sbHeight,
+                24.sbHeight,
                 _addCookingInstructionTextWidget()
               ],
             ),
@@ -234,6 +235,12 @@ class CartScreen extends StatelessWidget {
 
   PreferredSizeWidget _cartAppBarWidget(BuildContext context) {
     return AppBar(
+      systemOverlayStyle: const SystemUiOverlayStyle(
+        // Status bar color
+        statusBarColor: Colors.white,
+        statusBarIconBrightness: Brightness.dark, // For Android (dark icons)
+        statusBarBrightness: Brightness.light,
+      ),
       title: Text(
         "PLACE ORDER",
         style: AppStyles.ubuntuTextStyle(fontSize: 20, color: AppColors.gray74),
