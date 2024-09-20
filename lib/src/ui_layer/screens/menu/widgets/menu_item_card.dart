@@ -169,3 +169,95 @@ class MenuItemGridCard extends StatelessWidget {
     );
   }
 }
+
+class LargeMenuCard extends StatelessWidget {
+  const LargeMenuCard({
+    super.key,
+    required this.cartProvider,
+    required this.dishOfTheWeek,
+  });
+
+  final CartProvider cartProvider;
+  final FoodItem dishOfTheWeek;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: AppStyles.pdH16,
+      decoration: AppDecorations.innerBoxDecoration,
+      child: Column(
+        children: [
+          if (dishOfTheWeek.image.isNotEmpty)
+            ClipRRect(
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(10),
+                topRight: Radius.circular(10),
+              ),
+              child: Image.network(
+                dishOfTheWeek.image,
+                height: 128.height,
+                width: double.infinity,
+                fit: BoxFit.cover,
+              ),
+            ),
+          Container(
+            // color: Color.fromRGBO(246, 246, 246, 1),
+            padding: AppStyles.pd8,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    SvgImageWidget(
+                      imagePath: AppImages.veg,
+                      color: dishOfTheWeek.isVeg ? null : AppColors.red,
+                    ),
+                    8.sbWidth,
+                    Expanded(
+                      child: Text(
+                        dishOfTheWeek.name,
+                        textAlign: TextAlign.start,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 16.fSize,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: AppFonts.ubuntu,
+                          color: AppColors.gray74,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      "₹${dishOfTheWeek.price}",
+                      style: AppStyles.ubuntuTextStyle(fontSize: 16),
+                    ),
+                  ],
+                ),
+                15.sbHeight,
+                Row(
+                  children: [
+                    const CommonTextButton(text: "VEGAN"),
+                    10.sbWidth,
+                    const CommonTextButton(text: "GLUTEN FREE"),
+                    const Spacer(),
+                    (cartProvider.getItemCount(dishOfTheWeek) == 0)
+                        ? InkWell(
+                            onTap: () {
+                              cartProvider.addItem(dishOfTheWeek);
+                            },
+                            child: const CommonAddButton())
+                        : CommonAddRemoveButton(
+                            items: cartProvider.getItemCount(dishOfTheWeek),
+                            onTapAdd: () => cartProvider.addItem(dishOfTheWeek),
+                            onTapRemove: () =>
+                                cartProvider.removeItem(dishOfTheWeek))
+                  ],
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}

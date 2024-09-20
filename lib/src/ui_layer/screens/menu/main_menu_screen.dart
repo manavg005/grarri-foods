@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
 import 'package:grarri/src/business_layer/providers/cart_provider.dart';
-import 'package:grarri/src/ui_layer/screens/menu/list_file.dart';
+import 'package:grarri/src/data_layer/list_file.dart';
 import 'package:grarri/src/ui_layer/screens/menu/widgets/menu_item_card.dart';
 import 'package:grarri/src/ui_layer/screens/menu/widgets/tooltip.dart';
 import 'package:grarri/src/ui_layer/widgets/custom_expansion_widget.dart';

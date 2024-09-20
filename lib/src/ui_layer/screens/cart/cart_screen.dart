@@ -45,7 +45,7 @@ class CartScreen extends StatelessWidget {
         ? const SizedBox.shrink()
         : Container(
             padding:
-                const EdgeInsets.only(left: 8, right: 8, top: 16, bottom: 16),
+                const EdgeInsets.only(left: 8, right: 8, top: 15, bottom: 16),
             margin: AppStyles.pd8,
             decoration: AppDecorations.innerBoxDecoration,
             child: Column(
@@ -108,22 +108,16 @@ class CartScreen extends StatelessWidget {
             children: [
               Text(
                 "${cartProvider.getTotalItemCount()} Items",
-                style: TextStyle(
-                  color: AppColors.white,
-                  fontSize: 12.fSize,
-                  fontWeight: FontWeight.w500,
-                  fontFamily: AppFonts.ubuntu,
-                ),
+                style: AppStyles.ubuntuTextStyle(
+                    fontSize: 12, color: AppColors.white),
               ),
               const Spacer(),
               Text(
                 "PLACE ORDER",
-                style: TextStyle(
-                  color: AppColors.white,
-                  fontSize: 13.fSize,
-                  fontWeight: FontWeight.w700,
-                  fontFamily: AppFonts.ubuntu,
-                ),
+                style: AppStyles.ubuntuTextStyle(
+                    fontSize: 13,
+                    color: AppColors.white,
+                    fontWeight: FontWeight.w700),
               ),
               8.sbWidth,
               Container(
@@ -142,7 +136,7 @@ class CartScreen extends StatelessWidget {
   Widget _previousOrdersWidget(CartProvider cartProvider) {
     return CustomExpansionTile(
       initiallyExpanded: false,
-      title: "Previous Orders",
+      title: "Previous orders",
       child: ListView.builder(
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(), // Keep this static
@@ -242,12 +236,7 @@ class CartScreen extends StatelessWidget {
     return AppBar(
       title: Text(
         "PLACE ORDER",
-        style: TextStyle(
-          color: AppColors.gray74,
-          fontSize: 20.fSize,
-          fontWeight: FontWeight.w500,
-          fontFamily: AppFonts.ubuntu,
-        ),
+        style: AppStyles.ubuntuTextStyle(fontSize: 20, color: AppColors.gray74),
       ),
       centerTitle: false,
       backgroundColor: AppColors.white,
@@ -284,11 +273,10 @@ class CartScreen extends StatelessWidget {
   Widget _itemPriceText(FoodItem item) {
     return Text(
       "₹${item.price}",
-      style: TextStyle(
-        fontSize: 12.fSize,
-        fontWeight: FontWeight.w400,
-        fontFamily: AppFonts.ubuntu,
+      style: AppStyles.ubuntuTextStyle(
+        fontSize: 12,
         color: AppColors.gray74,
+        fontWeight: FontWeight.w400,
       ),
     );
   }
@@ -300,11 +288,10 @@ class CartScreen extends StatelessWidget {
       overflow: TextOverflow.ellipsis,
       softWrap: true,
       maxLines: 2,
-      style: TextStyle(
-        fontSize: 14.fSize,
-        fontWeight: FontWeight.w400,
-        fontFamily: AppFonts.ubuntu,
+      style: AppStyles.ubuntuTextStyle(
+        fontSize: 14,
         color: AppColors.gray74,
+        fontWeight: FontWeight.w400,
       ),
     );
   }

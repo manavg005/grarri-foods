@@ -134,3 +134,84 @@ final List<FoodItem> nonVegItems = [
       price: 420.00,
       isVeg: false),
 ];
+
+final List<FoodItem> pizzas = [
+  FoodItem(
+      name: 'Margherita Pizza',
+      image:
+          'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
+      price: 350.00,
+      isVeg: true),
+  FoodItem(
+      name: 'Pepperoni Pizza',
+      image:
+          'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
+      price: 450.00,
+      isVeg: false),
+  FoodItem(
+      name: 'BBQ Chicken Pizza',
+      image:
+          'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
+      price: 490.00,
+      isVeg: false),
+  FoodItem(
+      name: 'Veggie Delight Pizza',
+      image:
+          'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
+      price: 370.00,
+      isVeg: true),
+];
+
+final List<FoodItem> pastas = [
+  FoodItem(
+      name: 'Pasta Alfredo with Bread',
+      image:
+          'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
+      price: 300.00,
+      isVeg: true),
+  FoodItem(
+      name: 'Bow Tie Pasta (Farfalle) with Bread - Creamy',
+      image:
+          'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
+      price: 280.00,
+      isVeg: true),
+  FoodItem(
+      name: 'Chicken Carbonara',
+      image:
+          'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
+      price: 450.00,
+      isVeg: false),
+  FoodItem(
+      name: 'Penne Primavera',
+      image:
+          'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
+      price: 320.00,
+      isVeg: true),
+];
+
+final List<FoodItem> dishOfTheWeek = [
+  FoodItem(
+      name: 'Ac rempus massa',
+      image:
+          'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
+      price: 900.00,
+      isVeg: true),
+  FoodItem(
+      name: 'Bow Tie Pasta (Farfalle) with Bread - Creamy',
+      image:
+          'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
+      price: 280.00,
+      isVeg: true),
+  FoodItem(
+      name: 'Chicken Carbonara',
+      image:
+          'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
+      price: 450.00,
+      isVeg: false),
+  FoodItem(
+      name: 'Penne Primavera',
+      image:
+          'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
+      price: 320.00,
+      isVeg: true),
+];

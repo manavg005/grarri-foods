@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grarri/src/business_layer/providers/cart_provider.dart';
-import 'package:grarri/src/data_layer/model/model.dart';
+import 'package:grarri/src/data_layer/list_file.dart';
 import 'package:grarri/src/data_layer/res/res.dart';
 import 'package:grarri/src/ui_layer/screens/menu/widgets/menu_item_card.dart';
 import 'package:grarri/src/ui_layer/widgets/custom_expansion_widget.dart';
@@ -13,59 +13,6 @@ class SpecialMenuScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final cartProvider = Provider.of<CartProvider>(context);
 
-    final List<FoodItem> pizzas = [
-      FoodItem(
-          name: 'Margherita Pizza',
-          image:
-              'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
-          price: 350.00,
-          isVeg: true),
-      FoodItem(
-          name: 'Pepperoni Pizza',
-          image:
-              'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
-          price: 450.00,
-          isVeg: false),
-      FoodItem(
-          name: 'BBQ Chicken Pizza',
-          image:
-              'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
-          price: 490.00,
-          isVeg: false),
-      FoodItem(
-          name: 'Veggie Delight Pizza',
-          image:
-              'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
-          price: 370.00,
-          isVeg: true),
-    ];
-
-    final List<FoodItem> pastas = [
-      FoodItem(
-          name: 'Pasta Alfredo with Bread',
-          image:
-              'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
-          price: 300.00,
-          isVeg: true),
-      FoodItem(
-          name: 'Bow Tie Pasta (Farfalle) with Bread - Creamy',
-          image:
-              'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
-          price: 280.00,
-          isVeg: true),
-      FoodItem(
-          name: 'Chicken Carbonara',
-          image:
-              'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
-          price: 450.00,
-          isVeg: false),
-      FoodItem(
-          name: 'Penne Primavera',
-          image:
-              'https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg',
-          price: 320.00,
-          isVeg: true),
-    ];
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -100,7 +47,7 @@ class SpecialMenuScreen extends StatelessWidget {
           CustomExpansionTile(
             title: "Today's Special",
             child: GridView.builder(
-              padding: AppStyles.pd16,
+              padding: AppStyles.pdH16,
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -116,6 +63,11 @@ class SpecialMenuScreen extends StatelessWidget {
                 return MenuItemGridCard(item: item, cartProvider: cartProvider);
               },
             ),
+          ),
+          CustomExpansionTile(
+            title: "Dish of the week",
+            child: LargeMenuCard(
+                dishOfTheWeek: dishOfTheWeek.first, cartProvider: cartProvider),
           ),
           CustomExpansionTile(
             title: "Recommended",

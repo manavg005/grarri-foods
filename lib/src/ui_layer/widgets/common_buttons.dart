@@ -22,6 +22,27 @@ class CommonButton extends StatelessWidget {
   }
 }
 
+class CommonTextButton extends StatelessWidget {
+  final String text;
+  const CommonTextButton({
+    super.key,
+    required this.text,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: d_12),
+      padding: AppStyles.pd6,
+      decoration: AppDecorations.innerBoxDecoration,
+      child: Text(
+        text,
+        style: AppStyles.ubuntuTextStyle(color: AppColors.selectedLabelText),
+      ),
+    );
+  }
+}
+
 class CommonAddButton extends StatelessWidget {
   const CommonAddButton({
     super.key,

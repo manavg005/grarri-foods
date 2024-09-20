@@ -52,7 +52,7 @@ class CustomExpansionTileState extends State<CustomExpansionTile> {
               child: Container(
                 height: 1,
                 color:
-                    AppColors.gray74.withOpacity(0.5), // Line below the title
+                    AppColors.gray74.withOpacity(0.2), // Line below the title
               ),
             ),
           ],

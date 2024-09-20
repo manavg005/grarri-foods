@@ -12,7 +12,7 @@ class AppStyles {
   static ubuntuTextStyle({
     Color color = AppColors.gray74,
     double fontSize = d_14,
-    double height = onePointFive,
+    double height = onePointTwo,
     TextDecoration? decoration = TextDecoration.none,
     FontWeight fontWeight = FontWeight.w500,
   }) {
@@ -161,6 +161,8 @@ class AppStyles {
 
   static const EdgeInsets pdH16V8 =
       EdgeInsets.symmetric(horizontal: d_16, vertical: d_8);
+  static EdgeInsets pdH16 =
+      const EdgeInsets.symmetric(horizontal: d_16, vertical: 0);
 
   static void setDeviceOrientationOfApp() {
     SystemChrome.setPreferredOrientations([
